@@ -6,7 +6,8 @@ const DEFAULT_CONFIG = {
   maxHeight: 600,
   autoRotate: true,
   debug: false,
-  mimeType: 'image/jpeg'
+  mimeType: 'image/jpeg',
+  backgroundColor: "white"
 };
 
 function dataURItoBuffer(dataURI) {
@@ -60,6 +61,8 @@ function scaleImage(img, config, orientation = 1) {
   canvas.width = img.width;
   canvas.height = img.height;
   var ctx = canvas.getContext('2d');
+  ctx.fillStyle = config.backgroundColor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.save();
 
   // EXIF
