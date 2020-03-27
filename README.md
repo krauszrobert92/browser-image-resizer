@@ -37,7 +37,8 @@ const config = {
   maxWidth: 800,
   maxHeight: 600,
   autoRotate: true,
-  debug: true
+  debug: true,
+  backgroundColor: "white"
 };
 
 // Note: A single file comes from event.target.files on <input>
